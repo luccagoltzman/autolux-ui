@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --primary: #FF0000; /* Vermelho */
@@ -10,13 +12,8 @@
   --accent: #FF3333; /* Vermelho mais claro para destaques */
   --background-light: #F5F5F5; /* Fundo claro */
   --background-dark: #1A1A1A; /* Fundo escuro */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #ffffff;
+  --foreground: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,41 +31,79 @@ body {
 
 /* Classes personalizadas para os elementos do site */
 .btn-primary {
-  @apply bg-red-600 hover:bg-red-700 text-white transition-colors;
+  background-color: var(--primary);
+  color: var(--text-light);
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
 }
 
 .btn-secondary {
-  @apply bg-black hover:bg-gray-800 text-white transition-colors;
+  background-color: var(--secondary);
+  color: var(--text-light);
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-light);
 }
 
 .header-garra {
-  @apply bg-black text-white;
+  background-color: var(--secondary);
+  color: var(--text-light);
 }
 
 .footer-garra {
-  @apply bg-black text-white;
+  background-color: var(--secondary);
+  color: var(--text-light);
 }
 
 .card-garra {
-  @apply bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
 .card-garra:hover {
-  @apply shadow-lg border-red-500;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
 }
 
 .section-dark {
-  @apply bg-black text-white;
+  background-color: var(--secondary);
+  color: var(--text-light);
 }
 
 .section-light {
-  @apply bg-gray-100;
+  background-color: var(--background-light);
 }
 
 .accent-border {
-  @apply border-red-600;
+  border-color: var(--primary);
 }
 
 .accent-text {
-  @apply text-red-600;
+  color: var(--primary);
+}
+
+/* Remover o ícone do Next.js */
+html::before,
+html::after,
+body::before,
+body::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Estilo para o container do WhatsApp button para garantir que ele fica por cima de tudo */
+a[aria-label="Entre em contato pelo WhatsApp"] {
+  z-index: 9999 !important;
 }

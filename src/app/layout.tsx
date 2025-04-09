@@ -18,6 +18,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GARRA Auto Center - Estética Automotiva Premium",
   description: "Serviços de estética automotiva de alta qualidade para cuidar do seu veículo na GARRA Auto Center",
+  icons: {
+    icon: ['/favicon.ico'],
+  },
+  metadataBase: new URL('https://garraauto.com.br'),
 };
 
 export default function RootLayout({
@@ -27,6 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

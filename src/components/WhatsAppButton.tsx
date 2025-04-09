@@ -6,8 +6,22 @@ export default function WhatsAppButton() {
       href="https://wa.me/5599999999999?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20GARRA%20Auto%20Center."
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 left-6 z-50 bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-lg transition-colors flex items-center justify-center"
+      className="fixed bottom-6 left-6"
       aria-label="Entre em contato pelo WhatsApp"
+      style={{ 
+        zIndex: 9999,
+        backgroundColor: '#FF0000',
+        color: 'white',
+        padding: '1rem',
+        borderRadius: '9999px',
+        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'background-color 0.2s ease'
+      }}
+      onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#CF0000'}
+      onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#FF0000'}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
