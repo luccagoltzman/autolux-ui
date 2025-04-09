@@ -395,7 +395,7 @@ export default function Contato() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <Link href="https://instagram.com" target="_blank" className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 hover:text-white">
+            <Link href="https://www.instagram.com/garra.autocenterr/" target="_blank" className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 hover:text-white">
               <Instagram className="w-8 h-8" />
             </Link>
             <Link href="https://facebook.com" target="_blank" className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-blue-600 hover:text-white">
