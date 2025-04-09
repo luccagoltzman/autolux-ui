@@ -39,23 +39,37 @@ export default function Agendamento() {
         throw new Error('Por favor, preencha todos os campos obrigatórios.');
       }
 
-      // Inserir dados no Supabase
-      const { error } = await supabase
-        .from('agendamentos')
-        .insert([
-          {
-            nome: formData.nome,
-            telefone: formData.telefone,
-            email: formData.email || null,
-            data_agendamento: formData.data,
-            horario: formData.horario,
-            veiculo: formData.veiculo || null,
-            mensagem: formData.mensagem || null,
-            status: 'pendente'
+      // Tentar inserir dados no Supabase (com tratamento de erro para ambiente de desenvolvimento)
+      try {
+        const { error } = await supabase
+          .from('agendamentos')
+          .insert([
+            {
+              nome: formData.nome,
+              telefone: formData.telefone,
+              email: formData.email || null,
+              data_agendamento: formData.data,
+              horario: formData.horario,
+              veiculo: formData.veiculo || null,
+              mensagem: formData.mensagem || null,
+              status: 'pendente'
+            }
+          ]);
+        
+        if (error) {
+          console.error('Erro ao inserir no Supabase:', error);
+          // Em ambiente de desenvolvimento, continuamos mesmo com erro do Supabase
+          if (process.env.NODE_ENV !== 'development') {
+            throw error;
           }
-        ]);
-
-      if (error) throw error;
+        }
+      } catch (supabaseError) {
+        console.error('Erro ao acessar Supabase:', supabaseError);
+        // Em ambiente de desenvolvimento, continuamos mesmo com erro do Supabase
+        if (process.env.NODE_ENV !== 'development') {
+          throw supabaseError;
+        }
+      }
 
       // Construir mensagem do WhatsApp
       let mensagemWhatsApp = `Olá, gostaria de agendar um horário para serviços de estética automotiva.\n\n`;
