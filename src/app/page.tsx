@@ -6,7 +6,7 @@ export default function Home() {
     <>
       {/* Banner Principal */}
       <section className="relative h-[80vh] w-full">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
@@ -16,13 +16,13 @@ export default function Home() {
           }}
         ></div>
         <div className="relative z-20 h-full flex flex-col items-center justify-center text-white container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Estética Automotiva Premium</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">GARRA <span className="text-red-600">Auto Center</span></h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl">
             Transforme seu veículo com nossos serviços de estética automotiva de alta qualidade
           </p>
           <Link
             href="/servicos"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-medium py-3 px-8 rounded-full transition-colors"
+            className="bg-red-600 hover:bg-red-700 text-white text-lg font-medium py-3 px-8 rounded-full transition-colors"
           >
             Ver Serviços
           </Link>
@@ -30,12 +30,12 @@ export default function Home() {
       </section>
 
       {/* Destaques de Serviços */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 border border-transparent hover:border-red-600">
               <div className="h-48 bg-gray-300"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Lavagem Premium</h3>
@@ -44,14 +44,14 @@ export default function Home() {
                 </p>
                 <Link
                   href="/servicos#lavagem"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-red-600 font-medium hover:underline"
                 >
                   Saiba mais
                 </Link>
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 border border-transparent hover:border-red-600">
               <div className="h-48 bg-gray-300"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Polimento</h3>
@@ -60,14 +60,14 @@ export default function Home() {
                 </p>
                 <Link
                   href="/servicos#polimento"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-red-600 font-medium hover:underline"
                 >
                   Saiba mais
                 </Link>
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 border border-transparent hover:border-red-600">
               <div className="h-48 bg-gray-300"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Proteção de Pintura</h3>
@@ -76,7 +76,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/servicos#protecao"
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-red-600 font-medium hover:underline"
                 >
                   Saiba mais
                 </Link>
@@ -87,7 +87,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/servicos"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-colors"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-full transition-colors"
             >
               Ver Todos os Serviços
             </Link>
@@ -96,47 +96,47 @@ export default function Home() {
       </section>
 
       {/* Por que nos escolher */}
-      <section className="py-16">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Por Que Nos Escolher?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-blue-600">✓</span>
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">✓</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Profissionais Experientes</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Nossa equipe é treinada e especializada em estética automotiva.
               </p>
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-blue-600">★</span>
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">★</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Produtos Premium</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Utilizamos apenas produtos de alta qualidade nas nossas aplicações.
               </p>
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-blue-600">⏱</span>
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">⏱</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Agendamento Fácil</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Marque seu horário online e receba confirmação imediata.
               </p>
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-blue-600">♥</span>
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-white">♥</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Satisfação Garantida</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Compromisso com a qualidade e satisfação dos clientes.
               </p>
             </div>
@@ -145,14 +145,14 @@ export default function Home() {
       </section>
 
       {/* Avaliações */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">O Que Nossos Clientes Dizem</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-600">
               <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
+                <div className="text-red-600 flex">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
               </div>
@@ -162,9 +162,9 @@ export default function Home() {
               <p className="font-bold">Carlos Silva</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-600">
               <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
+                <div className="text-red-600 flex">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
               </div>
@@ -174,9 +174,9 @@ export default function Home() {
               <p className="font-bold">Ana Oliveira</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-600">
               <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
+                <div className="text-red-600 flex">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Pronto para transformar seu veículo?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -198,7 +198,7 @@ export default function Home() {
           </p>
           <Link
             href="/agendamento"
-            className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-full transition-colors inline-block"
+            className="bg-black text-white hover:bg-gray-800 font-medium py-3 px-8 rounded-full transition-colors inline-block"
           >
             Agendar Agora
           </Link>

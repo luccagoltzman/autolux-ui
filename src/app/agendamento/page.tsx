@@ -72,7 +72,7 @@ export default function Agendamento() {
       }
 
       // Construir mensagem do WhatsApp
-      let mensagemWhatsApp = `Olá, gostaria de agendar um horário para serviços de estética automotiva.\n\n`;
+      let mensagemWhatsApp = `Olá, gostaria de agendar um horário na GARRA Auto Center.\n\n`;
       mensagemWhatsApp += `Nome: ${formData.nome}\n`;
       mensagemWhatsApp += `Telefone: ${formData.telefone}\n`;
       mensagemWhatsApp += `Data: ${formData.data}\n`;
@@ -122,15 +122,15 @@ export default function Agendamento() {
       <h1 className="text-4xl font-bold text-center mb-8">Agende seu Atendimento</h1>
       
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-blue-600 text-white p-6">
+        <div className="bg-red-600 text-white p-6">
           <h2 className="text-xl font-bold">Preencha o formulário abaixo</h2>
           <p className="mt-2">Encontre o melhor horário para cuidar do seu veículo</p>
         </div>
         
         {sucesso ? (
           <div className="p-8 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl text-green-600">✓</span>
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl text-red-600">✓</span>
             </div>
             <h3 className="text-xl font-bold mb-2">Agendamento Enviado!</h3>
             <p className="text-gray-600 mb-6">
@@ -138,7 +138,7 @@ export default function Agendamento() {
             </p>
             <button
               onClick={() => setSucesso(false)}
-              className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full transition-colors"
+              className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full transition-colors"
             >
               Fazer Novo Agendamento
             </button>
@@ -162,7 +162,7 @@ export default function Agendamento() {
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                   placeholder="Seu nome completo"
                   required
                 />
@@ -178,7 +178,7 @@ export default function Agendamento() {
                   name="telefone"
                   value={formData.telefone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                   placeholder="(99) 99999-9999"
                   required
                 />
@@ -195,7 +195,7 @@ export default function Agendamento() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="exemplo@email.com"
               />
             </div>
@@ -212,7 +212,7 @@ export default function Agendamento() {
                     name="data"
                     value={formData.data}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     required
                   />
                   <Calendar className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -229,7 +229,7 @@ export default function Agendamento() {
                     name="horario"
                     value={formData.horario}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     required
                   >
                     <option value="">Selecione um horário</option>
@@ -254,7 +254,7 @@ export default function Agendamento() {
                 name="veiculo"
                 value={formData.veiculo}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="Marca, modelo e ano do veículo"
               />
             </div>
@@ -269,7 +269,7 @@ export default function Agendamento() {
                 value={formData.mensagem}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="Informe aqui serviços específicos que deseja ou qualquer outra informação importante"
               ></textarea>
             </div>
@@ -278,7 +278,7 @@ export default function Agendamento() {
               <button
                 type="submit"
                 disabled={enviando}
-                className={`w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-full flex justify-center items-center transition-colors ${
+                className={`w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-full flex justify-center items-center transition-colors ${
                   enviando ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >

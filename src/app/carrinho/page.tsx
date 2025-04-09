@@ -21,7 +21,7 @@ export default function Carrinho() {
 
   // Construir mensagem do WhatsApp
   const construirMensagemWhatsApp = () => {
-    let mensagem = 'Olá, gostaria de agendar os seguintes serviços:\n\n';
+    let mensagem = 'Olá, gostaria de agendar os seguintes serviços na GARRA Auto Center:\n\n';
     
     itens.forEach(item => {
       mensagem += `- ${item.nome} - ${formatarPreco(item.preco)}\n`;
@@ -47,7 +47,7 @@ export default function Carrinho() {
           <p className="text-xl text-gray-500 mb-6">Seu carrinho está vazio.</p>
           <Link
             href="/servicos"
-            className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-full inline-flex items-center transition-colors"
+            className="bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-full inline-flex items-center transition-colors"
           >
             Ver Serviços
           </Link>
@@ -57,7 +57,7 @@ export default function Carrinho() {
           {/* Lista de itens no carrinho */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6 border-b">
+              <div className="p-6 border-b bg-black text-white">
                 <h2 className="text-xl font-bold">Serviços Selecionados</h2>
               </div>
               
@@ -70,7 +70,7 @@ export default function Carrinho() {
                       <p className="text-sm text-gray-500 mt-1">Duração: {item.duracao}</p>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="font-bold text-blue-600">{formatarPreco(item.preco)}</span>
+                      <span className="font-bold text-red-600">{formatarPreco(item.preco)}</span>
                       <button
                         onClick={() => removerDoCarrinho(index)}
                         className="text-red-500 hover:text-red-700 transition-colors"
@@ -91,7 +91,7 @@ export default function Carrinho() {
                   Limpar Carrinho
                 </button>
                 <div className="text-xl font-bold">
-                  Total: {formatarPreco(totalCarrinho())}
+                  Total: <span className="text-red-600">{formatarPreco(totalCarrinho())}</span>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Carrinho() {
           {/* Formulário de agendamento */}
           <div className="lg:w-1/3">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6 border-b">
+              <div className="p-6 border-b bg-black text-white">
                 <h2 className="text-xl font-bold">Dados para Agendamento</h2>
               </div>
               
@@ -114,7 +114,7 @@ export default function Carrinho() {
                     id="nome"
                     value={inputNome}
                     onChange={(e) => setInputNome(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Seu nome completo"
                     required
                   />
@@ -129,7 +129,7 @@ export default function Carrinho() {
                     id="telefone"
                     value={inputTelefone}
                     onChange={(e) => setInputTelefone(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="(99) 99999-9999"
                     required
                   />
@@ -144,7 +144,7 @@ export default function Carrinho() {
                     id="data"
                     value={inputData}
                     onChange={(e) => setInputData(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                     placeholder="Ex: 25/05 entre 14h e 17h"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function Carrinho() {
                     href={`https://wa.me/5599999999999?text=${construirMensagemWhatsApp()}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full flex justify-center items-center transition-colors ${
+                    className={`w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-full flex justify-center items-center transition-colors ${
                       !inputNome || !inputTelefone ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                     onClick={(e) => {

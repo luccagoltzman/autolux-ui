@@ -111,7 +111,7 @@ export default function Servicos() {
             key={categoria.id}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               filtroCategoria === categoria.id
-                ? 'bg-blue-600 text-white'
+                ? 'bg-red-600 text-white'
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
             onClick={() => setFiltroCategoria(categoria.id)}
@@ -126,19 +126,19 @@ export default function Servicos() {
         {servicosFiltrados.map(servico => (
           <div
             key={servico.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200"
+            className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:border-red-600 transition-colors"
           >
             <div className="h-40 bg-gray-300"></div>
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold">{servico.nome}</h3>
-                <span className="text-blue-600 font-bold">R$ {servico.preco}</span>
+                <span className="text-red-600 font-bold">R$ {servico.preco}</span>
               </div>
               <p className="text-gray-600 mb-4">{servico.descricao}</p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-500">Duração: {servico.duracao}</span>
                 <button
-                  className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full flex items-center transition-colors"
+                  className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-full flex items-center transition-colors"
                   onClick={() => adicionarAoCarrinho(servico)}
                 >
                   <ShoppingCart className="h-4 w-4 mr-2" />
@@ -155,7 +155,7 @@ export default function Servicos() {
         <div className="fixed bottom-6 right-6">
           <Link
             href="/carrinho"
-            className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg flex items-center transition-colors"
+            className="bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-lg flex items-center transition-colors"
           >
             <ShoppingCart className="h-6 w-6 mr-2" />
             <span className="font-bold">{itens.length}</span>

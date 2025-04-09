@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AutoLux - Estética Automotiva Premium",
-  description: "Serviços de estética automotiva de alta qualidade para cuidar do seu veículo",
+  title: "GARRA Auto Center - Estética Automotiva Premium",
+  description: "Serviços de estética automotiva de alta qualidade para cuidar do seu veículo na GARRA Auto Center",
 };
 
 export default function RootLayout({

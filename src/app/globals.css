@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #FF0000; /* Vermelho */
+  --primary-dark: #CF0000; /* Vermelho escuro */
+  --secondary: #000000; /* Preto */
+  --secondary-light: #333333; /* Preto mais claro */
+  --text-light: #FFFFFF; /* Texto claro */
+  --text-dark: #000000; /* Texto escuro */
+  --accent: #FF3333; /* Vermelho mais claro para destaques */
+  --background-light: #F5F5F5; /* Fundo claro */
+  --background-dark: #1A1A1A; /* Fundo escuro */
 }
 
 @theme inline {
@@ -23,4 +30,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Classes personalizadas para os elementos do site */
+.btn-primary {
+  @apply bg-red-600 hover:bg-red-700 text-white transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-black hover:bg-gray-800 text-white transition-colors;
+}
+
+.header-garra {
+  @apply bg-black text-white;
+}
+
+.footer-garra {
+  @apply bg-black text-white;
+}
+
+.card-garra {
+  @apply bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden;
+}
+
+.card-garra:hover {
+  @apply shadow-lg border-red-500;
+}
+
+.section-dark {
+  @apply bg-black text-white;
+}
+
+.section-light {
+  @apply bg-gray-100;
+}
+
+.accent-border {
+  @apply border-red-600;
+}
+
+.accent-text {
+  @apply text-red-600;
 }
