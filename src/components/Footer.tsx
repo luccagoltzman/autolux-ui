@@ -47,11 +47,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-gray-300" />
-                <span className="text-gray-300">(99) 99999-9999</span>
+                <span className="text-gray-300">(99) 98440-1896</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-gray-300" />
-                <span className="text-gray-300">contato@garraauto.com.br</span>
+                <span className="text-gray-300">garra.autocenterr@gmail.com</span>
               </li>
             </ul>
           </div>

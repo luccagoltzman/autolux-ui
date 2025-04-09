@@ -246,7 +246,7 @@ export default function Carrinho() {
                   
                   <div className="pt-6">
                     <Link
-                      href={`https://wa.me/5599999999999?text=${construirMensagemWhatsApp()}`}
+                      href={`https://wa.me/5599984401896?text=${construirMensagemWhatsApp()}`}
                       target="_blank"
                       className={`w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-6 rounded-lg font-medium flex justify-center items-center transition-colors shadow-md hover:shadow-lg ${
                         !inputNome || !inputTelefone ? 'opacity-50 cursor-not-allowed' : 'hover:from-red-700 hover:to-red-800'

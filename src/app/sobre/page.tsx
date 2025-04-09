@@ -91,7 +91,7 @@ export default function SobreNos() {
               <h2 className="text-3xl font-bold mt-2 mb-6">Excelência em estética automotiva desde 2018</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Fundada com a paixão por carros e a missão de proporcionar cuidados de altíssima qualidade para veículos, a GARRA Auto Center nasceu do sonho de um jovem empreendedor apaixonado pelo universo automotivo.
+                  Fundada com a paixão por carros e a missão de proporcionar cuidados de altíssima qualidade para veículos, a GARRA Auto Center nasceu do sonho de um empreendedor apaixonado pelo universo automotivo.
                 </p>
                 <p>
                   Com início modesto em 2018, nossa trajetória foi construída com dedicação, aprendizado constante e compromisso inabalável com a satisfação dos clientes. O que começou com serviços básicos de lavagem, rapidamente evoluiu para uma gama completa de tratamentos estéticos automotivos de alto padrão.

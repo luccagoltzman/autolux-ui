@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
   
   const handleClick = () => {
     // Número de telefone ou link para conversa direta
-    const phoneNumber = "5511999999999"; // Altere para o número correto
+    const phoneNumber = "5599984401896"; // Altere para o número correto
     const message = "Olá! Estou interessado nos serviços da GARRA Auto Center.";
     
     // URL encode da mensagem

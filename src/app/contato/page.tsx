@@ -67,28 +67,28 @@ export default function Contato() {
     {
       icon: <MapPin className="h-6 w-6 text-red-500" />,
       titulo: 'Endereço',
-      detalhes: 'Av. Paulista, 1578, São Paulo - SP',
+      detalhes: 'R. Dois, 75, Balsas - MA, 65800-000',
       acao: 'Ver no mapa',
-      link: 'https://maps.google.com'
+      link: 'https://www.google.com/maps/place/R.+Dois,+75+-+Balsas,+MA,+65800-000/@-7.4982164,-46.0388681,17z/'
     },
     {
       icon: <Phone className="h-6 w-6 text-red-500" />,
       titulo: 'Telefone',
-      detalhes: '(11) 3456-7890',
+      detalhes: '(99) 98440-1896',
       acao: 'Ligar agora',
-      link: 'tel:1134567890'
+      link: 'tel:99984401896'
     },
     {
       icon: <Mail className="h-6 w-6 text-red-500" />,
       titulo: 'Email',
-      detalhes: 'contato@garraauto.com.br',
+      detalhes: 'garra.autocenterr@gmail.com',
       acao: 'Enviar email',
-      link: 'mailto:contato@garraauto.com.br'
+      link: 'mailto:garra.autocenterr@gmail.com'
     },
     {
       icon: <Clock className="h-6 w-6 text-red-500" />,
       titulo: 'Horário de Funcionamento',
-      detalhes: 'Seg-Sex: 8h-19h | Sáb: 8h-14h',
+      detalhes: 'Seg-Sab: 8h-18h',
       acao: 'Agendar visita',
       link: '/agendamento'
     },
@@ -312,7 +312,7 @@ export default function Contato() {
           <div className="relative h-[500px] md:h-auto overflow-hidden">
             <div className="absolute inset-0 bg-gray-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.384489848509!2d-46.65804282378404!3d-23.55559408462879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1712618694652!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.8561256323907!2d-46.03886812394566!3d-7.498216374263626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d1f723ad33717%3A0x4c77ccc40d429cc1!2sR.%20Dois%2C%2075%20-%20Balsas%2C%20MA%2C%2065800-000!5e0!3m2!1spt-BR!2sbr!4v1712684958784!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

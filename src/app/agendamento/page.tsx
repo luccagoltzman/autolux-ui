@@ -112,7 +112,7 @@ export default function Agendamento() {
 
       // Redirecionar para o WhatsApp
       window.open(
-        `https://wa.me/5599999999999?text=${encodeURIComponent(mensagemWhatsApp)}`,
+        `https://wa.me/5599984401896?text=${encodeURIComponent(mensagemWhatsApp)}`,
         '_blank'
       );
 
@@ -570,7 +570,7 @@ export default function Agendamento() {
                   Entre em contato diretamente pelo nosso canal de WhatsApp para atendimento imediato.
                 </p>
                 <Button
-                  href="https://wa.me/5599999999999"
+                  href="https://wa.me/5599984401896"
                   variant="primary"
                   external={true}
                   className="bg-white text-red-600 hover:bg-gray-100 w-full"
