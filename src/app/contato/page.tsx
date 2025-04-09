@@ -56,7 +56,7 @@ export default function Contato() {
       
       setEnviado(true);
       setTimeout(() => setEnviado(false), 5000);
-    } catch (error) {
+    } catch {
       setErro('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
     } finally {
       setEnviando(false);

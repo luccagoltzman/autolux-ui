@@ -4,7 +4,7 @@ import { useCarrinhoStore } from '@/store/carrinhoStore';
 import Link from 'next/link';
 import { Trash2, ArrowRight, ShoppingCart, Clock, Calendar } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import AnimatedSection from '@/components/AnimatedSection';
 import Button from '@/components/Button';
 

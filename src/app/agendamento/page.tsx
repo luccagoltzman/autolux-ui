@@ -1,16 +1,13 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { Calendar, Clock, Send, Car, Check, Mail, Phone, User, MessageSquare, ChevronRight } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Button from '@/components/Button';
 import AnimatedSection from '@/components/AnimatedSection';
-import Image from 'next/image';
 
 export default function Agendamento() {
-  const router = useRouter();
   const [formStep, setFormStep] = useState(1);
   const [formData, setFormData] = useState({
     nome: '',
@@ -26,7 +23,6 @@ export default function Agendamento() {
   const [sucesso, setSucesso] = useState(false);
   
   const formRef = useRef(null);
-  const formInView = useInView(formRef, { once: true, amount: 0.3 });
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -130,8 +126,8 @@ export default function Agendamento() {
       });
       setFormStep(1);
 
-    } catch (error: any) {
-      setErro(error.message || 'Ocorreu um erro ao processar seu agendamento. Por favor, tente novamente.');
+    } catch (error) {
+      setErro(error instanceof Error ? error.message : 'Ocorreu um erro ao processar seu agendamento. Por favor, tente novamente.');
     } finally {
       setEnviando(false);
     }

@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Users, Calendar, Award, ThumbsUp, BarChart, Check } from 'lucide-react';
+import { Users, Award, ThumbsUp, Check } from 'lucide-react';
 import Link from 'next/link';
 import Button from '@/components/Button';
 import AnimatedSection from '@/components/AnimatedSection';

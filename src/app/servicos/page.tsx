@@ -5,7 +5,6 @@ import { useCarrinhoStore, Servico } from '@/store/carrinhoStore';
 import Link from 'next/link';
 import { ShoppingCart, Filter, Tag, Clock, Search } from 'lucide-react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import Image from 'next/image';
 import Button from '@/components/Button';
 import AnimatedSection from '@/components/AnimatedSection';
 
