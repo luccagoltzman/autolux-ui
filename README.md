@@ -44,7 +44,7 @@ npm start
 
 ## Autor
 
-AutoLux - Estética Automotiva
+AutoLux - Lucca Goltzman
 
 ## Licença
 
