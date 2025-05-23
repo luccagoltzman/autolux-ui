@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   title: "GARRA Auto Center - Estética Automotiva Premium",
   description: "Serviços de estética automotiva de alta qualidade para cuidar do seu veículo na GARRA Auto Center",
   icons: {
-    icon: ['/favicon.ico'],
+    icon: [
+      {
+        url: '/icons/favicon.ico',
+        sizes: 'any',
+      },
+    ],
   },
   metadataBase: new URL('https://garraauto.com.br'),
 };

@@ -120,7 +120,7 @@ export default function TestimonialSlider() {
                 </div>
               </div>
               
-              <p className="text-gray-600 mb-4 flex-grow">
+              <p className="text-gray-800 mb-4 flex-grow font-medium">
                 "{testimonial.text}"
               </p>
               
@@ -133,19 +133,19 @@ export default function TestimonialSlider() {
                   />
                 ) : (
                   <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
-                    <span className="text-gray-500 font-bold text-xl">
+                    <span className="text-gray-700 font-bold text-xl">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
                 )}
                 
                 <div>
-                  <p className="font-bold">{testimonial.name}</p>
+                  <p className="font-bold text-gray-900">{testimonial.name}</p>
                   {testimonial.vehicle && (
-                    <p className="text-sm text-gray-500">{testimonial.vehicle}</p>
+                    <p className="text-sm text-gray-700 font-medium">{testimonial.vehicle}</p>
                   )}
                   {testimonial.service && (
-                    <p className="text-xs text-red-600">{testimonial.service}</p>
+                    <p className="text-xs text-red-600 font-medium">{testimonial.service}</p>
                   )}
                 </div>
               </div>

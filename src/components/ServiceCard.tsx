@@ -49,9 +49,10 @@ export default function ServiceCard({
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover object-center"
+            className="object-cover object-center transition-transform duration-300"
             quality={90}
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={index === 0}
           />
         </motion.div>
       </div>
@@ -84,11 +85,11 @@ export default function ServiceCard({
       
       {/* Conteúdo do card */}
       <motion.div 
-        className="relative z-20 flex flex-col h-full p-6 justify-end"
+        className="relative z-20 flex flex-col h-full p-12 justify-end"
         style={{ minHeight: '280px' }}
       >
         <motion.h3 
-          className="text-xl font-bold text-white mb-2"
+          className="text-2xl font-bold text-white/95 mb-2 drop-shadow-lg"
           animate={{ y: isHovered ? -10 : 0 }}
           transition={{ duration: 0.3 }}
         >
@@ -100,7 +101,7 @@ export default function ServiceCard({
           transition={{ duration: 0.3 }}
           className={`overflow-hidden ${!isHovered ? 'mb-0' : 'mb-4'}`}
         >
-          <p className="text-gray-200 text-sm">{description}</p>
+          <p className="text-white/95 text-sm font-medium">{description}</p>
         </motion.div>
         
         {/* Detalhes do serviço */}
@@ -118,7 +119,7 @@ export default function ServiceCard({
             )}
             
             {duration && (
-              <div className="flex items-center text-gray-300 text-sm">
+              <div className="flex items-center text-white/95 text-sm font-medium">
                 <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

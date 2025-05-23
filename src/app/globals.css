@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .service-title {
+    @apply text-2xl font-bold text-gray-900;
+  }
+}
+
 :root {
   --primary: #FF0000; /* Vermelho */
   --primary-dark: #CF0000; /* Vermelho escuro */
@@ -14,6 +20,13 @@
   --background-dark: #1A1A1A; /* Fundo escuro */
   --background: #ffffff;
   --foreground: #000000;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --input-text: #1A1A1A; /* Cor do texto nos inputs */
+  --input-placeholder: #666666; /* Cor do placeholder */
+  --input-border: #E5E7EB; /* Cor da borda dos inputs */
+  --input-border-focus: #FF0000; /* Cor da borda quando focado */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +40,30 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para inputs e campos de texto */
+input,
+textarea,
+select {
+  color: var(--input-text);
+  border-color: var(--input-border);
+  background-color: white;
+  font-weight: 500;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--input-border-focus);
+  outline: none;
+  ring-color: var(--primary);
 }
 
 /* Classes personalizadas para os elementos do site */
@@ -66,7 +103,7 @@ body {
 
 .card-garra {
   background-color: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--input-border);
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;

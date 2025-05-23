@@ -18,13 +18,13 @@ export default function HeroBanner({
   subtitle = "Transforme seu veículo com nossos serviços de estética automotiva de alta qualidade",
   buttonText = "Ver Serviços",
   buttonLink = "/servicos",
-  imageUrl = "/images/banner.jpg"
+  imageUrl = "/images/banner-temp.svg"
 }: HeroBannerProps) {
   
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [parallaxImages] = useState([
-    { url: '/images/parallax-1.png', speed: -20 },
-    { url: '/images/parallax-2.png', speed: -10 },
+    { url: '/images/banner-temp.svg', speed: -20 },
+    { url: '/images/banner-temp.svg', speed: -10 },
   ]);
   
   useEffect(() => {
@@ -97,26 +97,35 @@ export default function HeroBanner({
       
       {/* Particles Effect (optional) */}
       <div className="absolute inset-0 z-20 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-red-500 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, Math.random() * -100],
-              opacity: [0, 1, 0],
-              scale: [0, Math.random() * 3 + 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 5 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 5
-            }}
-          />
-        ))}
+        {Array.from({ length: 20 }).map((_, i) => {
+          // Usando valores determinísticos baseados no índice
+          const left = ((i * 13) % 100);
+          const top = ((i * 17) % 100);
+          const scale = 1 + ((i * 7) % 3);
+          const duration = 3 + ((i * 11) % 3);
+          const delay = (i * 0.2) % 5;
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-red-500 rounded-full"
+              style={{
+                left: `${left}%`,
+                top: `${top}%`,
+              }}
+              animate={{
+                y: [0, -100],
+                opacity: [0, 1, 0],
+                scale: [0, scale, 0]
+              }}
+              transition={{
+                duration: duration,
+                repeat: Infinity,
+                delay: delay
+              }}
+            />
+          );
+        })}
       </div>
       
       {/* Content */}

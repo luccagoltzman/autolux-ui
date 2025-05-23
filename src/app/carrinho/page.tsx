@@ -68,7 +68,7 @@ export default function Carrinho() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Seu <span className="text-red-500">Carrinho</span> de Serviços
             </h1>
-            <p className="text-lg text-gray-300 max-w-xl mx-auto">
+            <p className="text-lg text-gray-100 max-w-xl mx-auto">
               Revise os serviços selecionados e agende seu atendimento com facilidade.
             </p>
           </motion.div>
@@ -130,8 +130,8 @@ export default function Carrinho() {
                     >
                       <div>
                         <h3 className="font-bold text-lg">{item.nome}</h3>
-                        <p className="text-gray-600">{item.descricao}</p>
-                        <p className="text-sm text-gray-500 mt-1 flex items-center">
+                        <p className="text-gray-600 font-medium">{item.descricao}</p>
+                        <p className="text-sm text-gray-600 mt-1 flex items-center">
                           <Clock className="h-4 w-4 mr-1 text-red-500" />
                           Duração: {item.duracao}
                         </p>
@@ -261,7 +261,7 @@ export default function Carrinho() {
                       <span className="mr-2">Finalizar via WhatsApp</span>
                       <ArrowRight className="h-5 w-5" />
                     </Link>
-                    <p className="text-sm text-gray-600 mt-3 text-center">
+                    <p className="text-sm text-gray-600 mt-3 text-center font-medium">
                       Ao enviar, você será redirecionado para o WhatsApp para finalizar seu agendamento.
                     </p>
                   </div>
@@ -279,7 +279,7 @@ export default function Carrinho() {
             delay={0.5}
           >
             <h2 className="text-2xl font-bold mb-4">Deseja adicionar mais serviços?</h2>
-            <p className="mb-6 text-gray-300 max-w-2xl mx-auto">
+            <p className="mb-6 text-gray-100 max-w-2xl mx-auto">
               Explore nossa gama completa de serviços e encontre a solução perfeita para seu veículo.
             </p>
             <Button

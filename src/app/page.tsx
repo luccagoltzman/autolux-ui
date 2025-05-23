@@ -14,7 +14,7 @@ const servicos = [
     id: 1,
     title: "Lavagem Premium",
     description: "Limpeza completa interna e externa com produtos de alta qualidade.",
-    imageUrl: "/images/servicos/lavagem.jpg",
+    imageUrl: "/images/banner-temp.svg",
     link: "/servicos#lavagem",
     price: "R$ 120",
     duration: "2h",
@@ -24,7 +24,7 @@ const servicos = [
     id: 2,
     title: "Polimento",
     description: "Restaure o brilho da pintura do seu veículo e elimine riscos e imperfeições.",
-    imageUrl: "/images/servicos/polimento.jpg",
+    imageUrl: "/images/banner-temp.svg",
     link: "/servicos#polimento",
     price: "R$ 350",
     duration: "4h",
@@ -34,7 +34,7 @@ const servicos = [
     id: 3,
     title: "Proteção de Pintura",
     description: "Vitrificação e ceramização para proteção duradoura da pintura do seu veículo.",
-    imageUrl: "/images/servicos/ceramica.jpg",
+    imageUrl: "/images/banner-temp.svg",
     link: "/servicos#protecao",
     price: "R$ 900",
     duration: "8h",
@@ -122,7 +122,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Transforme seu veículo com nossos <span className="text-red-600">serviços premium</span>
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               Oferecemos uma linha completa de serviços de estética automotiva para manter seu veículo sempre impecável.
             </p>
           </motion.div>
@@ -233,7 +233,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               O que nossos <span className="text-red-600">clientes dizem</span>
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               A satisfação dos nossos clientes é o nosso maior orgulho. Confira alguns depoimentos.
             </p>
           </div>
@@ -289,7 +289,7 @@ export default function Home() {
           </motion.h2>
           
           <motion.p 
-            className="text-xl mb-8 max-w-2xl mx-auto text-white/80"
+            className="text-xl mb-8 max-w-2xl mx-auto text-white opacity-90"
             variants={itemVariants}
           >
             Agende agora mesmo seu horário e descubra a diferença de um serviço premium.
